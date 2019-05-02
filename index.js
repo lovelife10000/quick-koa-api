@@ -6,8 +6,9 @@ const json2 =require('./db2.json')
 const banner =require('./banner.json')
 
 var options={
-    origin:['https']
+    origin:['http://localhost:3000','http://localhost:63342']
 }
+app.use(cors(options));
 app.post('/admin/sys/cfg/dic/type/list', function (req, res) {
     res.send(json)
 })
